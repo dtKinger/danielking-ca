@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap');
+:root{
+  --header-min-height: 5vh;
+  --footer-min-height: 5vh;
+  --text-color-light-mode: rgb(56, 56, 56);
+  --text-color-dark-mode: rgb(255, 255, 255);
+  --bg-gradient-light-mode: radial-gradient(circle, rgba(255,252,85,0.4) 0%, rgba(255,255,255,1) 66%);
+  --bg-gradient-dark-mode: linear-gradient(0deg, rgba(20,30,40,1) 0%, rgba(56,56,56,1) 100%);
+  --bg-color-light-mode: rgb(255, 255, 255);
+  --bg-color-dark-mode: rgb(56, 56, 56);
+  --text-shadow-light-mode: 2px 2px 2px white;
+  --text-shadow-dark-mode: 2px 2px 2px rgb(56, 56, 56);
+
+  font-size: 18px;
+  color: var(--text-color-light-mode);
+  background-color: var(--bg-color-light-mode);
+  font-family: 'Roboto', sans-serif, monospace;
+}
+
+div {
+  border: 1px solid red; /* for development only */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-gradient-light-mode);
+}
+
+body * {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  min-height: var(--header-min-height);
+  justify-content: space-between;
+}
+
+header > div:not(.nav-links) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-theme-select {
+  display: flex;
+  flex-direction: column;
+}
+
+
+main {
+  min-height: calc(100vh - var(--header-min-height) - var(--footer-min-height));
+}
+
+footer {
+  min-height: var(--footer-min-height);
+}
+
+h1 {
+  text-shadow: var(--text-shadow-light-mode);
+  padding: 10px;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2em; 
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+p {
+
+}
+
+
+/* Utils */
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+
+/* End Utils */

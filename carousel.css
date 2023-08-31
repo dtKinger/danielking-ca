@@ -1,0 +1,76 @@
+.carousel-container {
+  /* background: transparent; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.carousel-pagination {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+}
+
+.carousel-pagination > span > img {
+  width: 64px;
+  height: 64px;
+  z-index: 10;
+  filter: invert(.95);
+  mix-blend-mode:color-dodge;
+  margin: 10px;
+  padding: 10px;
+}
+
+.carousel-images {
+  display: flex;
+  flex-direction: row;
+  mix-blend-mode: luminosity;
+  transition: transform 300ms ease-in-out;
+}
+
+.carousel-images > li > img {
+  width: 90vw;
+  height: 400px;
+  border: 2px solid transparent;
+}
+
+.image-select {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  border-bottom: 2px solid white;
+  border-radius: 20px;
+}
+
+.image-select > li > svg {
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.active {
+  background-color: white;
+}
+
+.image-select > li > svg:active{
+  background-color: white;
+}
+
+.image-select > li > svg:hover{
+  cursor: pointer;
+}
+
+.zero-opacity{
+  opacity: 0;
+}
+
+.next, .previous {
+  cursor: pointer;
+  z-index: 11;
+}

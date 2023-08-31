@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap');
+@import "./carousel.css";
+@import "./nav-menu.css";
+
 :root{
   --header-min-height: 5vh;
   --footer-min-height: 5vh;
@@ -90,7 +93,8 @@ h2 {
 }
 
 h3 {
-
+  font-size: 1.5em;
+  padding: 12px 6px;
 }
 
 h4 {
@@ -100,6 +104,20 @@ h4 {
 p {
 
 }
+
+.my-handle {
+  align-items: flex-end;
+}
+
+.credits {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.social-icons {
+  
+}
+
 
 
 /* Utils */

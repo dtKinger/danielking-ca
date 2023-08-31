@@ -1,0 +1,105 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.hamburger{
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+
+  justify-content: center;
+  align-items: center;
+  transition: 200ms;
+  border: 1px solid white;
+
+  filter: invert(0.5);
+  mix-blend-mode: color-dodge;
+  border-radius: 5px;
+}
+
+.hamburger::before{
+  content:'';
+  position: absolute;
+  background-color:white;
+  width: 22px;
+  height: 2px;
+  transition: 200ms;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 0 white;
+}
+
+.hamburger::after{
+  content:'';
+  position: absolute;
+  background-color:white;
+  width: 22px;
+  height: 2px;
+  transition: 200ms;
+  transform: translateY(10px);
+}
+
+.hamburger.active::before{
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 0 white;
+}
+
+.hamburger.active::after{
+  transform: translateY(0px) rotate(-45deg);
+}
+
+
+@media screen and (max-width: 600px){
+
+  .list > li > a{
+    mix-blend-mode: normal;
+    filter: invert(1);
+  }
+
+  .hamburger{
+    display: flex; 
+  }
+
+  .list {
+    /* display: none; */
+    flex-direction: column;
+    position: absolute;
+    gap: 6px;
+    z-index: 3;
+    right: 0;
+    text-align: right;
+    padding: 10px;
+    margin: 10px;  
+    border-radius: 8px;
+    background-color: transparent;
+
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    /* transition:  500ms ease-in-out; */
+  }
+
+
+  .list.expand{
+    display: flex;
+    color: black;
+    background-color: white;
+    transition: background-color 200ms ease-in-out;
+    opacity: 1; /* Make the list visible with opacity 1 */
+  }
+
+
+}
+
+@media screen and (max-width: 430px){
+  header {
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    display: none;
+  }
+}

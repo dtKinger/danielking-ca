@@ -15,28 +15,26 @@
   justify-content: center;
   align-items: center;
   transition: 200ms;
-  border: 1px solid white;
+  border: 1px solid var(--crosshair-border-color);
 
-  filter: invert(0.5);
-  mix-blend-mode: color-dodge;
   border-radius: 5px;
 }
 
 .hamburger::before{
   content:'';
   position: absolute;
-  background-color:white;
+  background-color: var(--crosshair-border-color);
   width: 22px;
   height: 2px;
   transition: 200ms;
   transform: translateY(-10px);
-  box-shadow: 0 10px 0 white;
+  box-shadow: 0 10px 0 var(--crosshair-border-color);
 }
 
 .hamburger::after{
   content:'';
   position: absolute;
-  background-color:white;
+  background-color:var(--crosshair-border-color);
   width: 22px;
   height: 2px;
   transition: 200ms;
@@ -45,7 +43,7 @@
 
 .hamburger.active::before{
   transform: translateY(0px) rotate(45deg);
-  box-shadow: 0 0 0 white;
+  box-shadow: 0 0 0 var(--crosshair-border-color);
 }
 
 .hamburger.active::after{
@@ -57,7 +55,7 @@
 
   .list > li > a{
     mix-blend-mode: normal;
-    filter: invert(1);
+    
   }
 
   .hamburger{

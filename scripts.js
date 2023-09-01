@@ -18,22 +18,20 @@ const heading1 = document.querySelector('h1')
 const buttons = document.querySelectorAll('button')
 const darkModeToggle = document.querySelector('.theme-toggle')
 
-header.classList.toggle('.fixed-header')
+header.classList.toggle('fixed-header')
 
 lightDarkToggle.addEventListener('click', () => {
   if (darkModeStatus === false){
-    document.body.style.setProperty('background', 'var(--bg-color-dark-mode)'); 
-    document.body.style.setProperty('color', 'var(--text-color-dark-mode)');
-    buttons.forEach((button) => button.style.setProperty('background-color', 'var(--accent-color-dark-mode)'))
-    buttons.forEach((button) => button.style.setProperty('color', 'var(--accent-color-light-mode)'))
+    document.documentElement.style.setProperty('--text-color-default', 'white')
+    document.documentElement.style.setProperty('--bg-color-default', 'rgb(35, 35, 35)')
+    document.documentElement.style.setProperty('--accent-color-default', 'white')
     document.documentElement.style.setProperty('--crosshair-border-color', 'white')
     darkModeToggle.textContent = 'Light mode';
   } else if (darkModeStatus === true){
-    document.body.style.setProperty('background', 'var(--bg-color-light-mode)'); 
-    document.body.style.setProperty('color', 'var(--text-color-light-mode)');
-    buttons.forEach((button) => button.style.setProperty('background-color', 'var(--accent-color-light-mode)'))
-    buttons.forEach((button) => button.style.setProperty('color', 'var(--accent-color-dark-mode)'))
-    document.documentElement.style.setProperty('--crosshair-border-color', 'black')
+    document.documentElement.style.setProperty('--text-color-default', 'rgb(35, 35, 35)')
+    document.documentElement.style.setProperty('--bg-color-default', 'white')
+    document.documentElement.style.setProperty('--accent-color-default', 'rgb(35, 35, 35)')
+    document.documentElement.style.setProperty('--crosshair-border-color', 'rgb(35, 35, 35)')
     darkModeToggle.textContent = 'Dark mode';
   }
   darkModeStatus = !darkModeStatus; // toggle it.

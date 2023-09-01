@@ -5,19 +5,14 @@
 :root{
   --header-min-height: 5vh;
   --footer-min-height: 5vh;
-  --text-color-light-mode: rgb(35, 35, 35);
-  --text-color-dark-mode: rgb(255, 255, 255);
-  /* --bg-gradient-light-mode: radial-gradient(circle, rgba(255,252,85,0.4) 0%, rgba(255,255,255,1) 66%);
-  --bg-gradient-dark-mode: linear-gradient(0deg, rgba(20,30,40,1) 0%, rgba(35, 35, 35, 1) 100%); */
-  --bg-color-light-mode: rgb(255, 255, 255);
-  --bg-color-dark-mode: rgb(35, 35, 35);
-  --accent-color-light-mode: rgb(35, 35, 35);
-  --accent-color-dark-mode: rgb(255, 255, 255);
-  --crosshair-border-color: black;
+  --text-color-default: rgb(35, 35, 35);
+  --bg-color-default: rgb(255, 255, 255);
+  --accent-color-default: rgb(35, 35, 35);
+  --crosshair-border-color: rgb(35, 35, 35);
 
   font-size: 18px;
-  color: var(--text-color-light-mode);
-  background-color: var(--bg-color-light-mode);
+  color: var(--text-color-default);
+  background-color: var(--bg-color-default);
   font-family: 'Roboto', sans-serif, monospace;
 }
 
@@ -44,14 +39,15 @@ button{
   padding: 8px 16px;
   border: none;
   border-radius: 10px;
-  color: var(--accent-color-dark-mode);
-  background-color: var(--accent-color-light-mode);
+  color: var(--text-color-default);
+  background-color: var(--bg-color-default);
   cursor: pointer;
+  filter: invert(1); /* By default make buttons inverted */
 }
 
 body {
   min-height: 100vh;
-  background: var(--bg-color-light-mode);
+  background: var(--bg-color-default);
 }
 
 body > * { /* header, main, footer */
@@ -62,6 +58,8 @@ header {
   display: flex;
   min-height: var(--header-min-height);
   justify-content: space-between;
+  border-bottom: 1px dashed grey;
+  background-color: var(--bg-color-default);
 }
 
 .fixed-header {
@@ -211,6 +209,12 @@ p {
 /* End Utils */
 
 /* Media queries*/
+
+@media screen and (min-width: 601px){
+  .crosshair-container, .square-wrapper{
+    max-width: 800px;
+  }
+}
 
 @media screen and (max-width: 600px){
   .crosshair-container{

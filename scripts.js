@@ -20,12 +20,13 @@ const buttons = document.querySelectorAll('button')
 const darkModeToggle = document.querySelector('.theme-toggle')
 const fixHeaderBtn = document.querySelector('.fixed-header-btn')
 const crosshairContainer = document.querySelector('.crosshair-container')
+const backgroundSquares = document.querySelectorAll('.square');
+const foregroundSquares = document.querySelectorAll('.foreground-square');
 
 fixHeaderBtn.addEventListener('click', () => {
   header.classList.toggle('fixed-header')
   crosshairContainer.classList.toggle('vertical-buffer');
   fixHeaderBtn.classList.toggle('btn-setting-active');
-  
 })
 
 
@@ -45,4 +46,12 @@ lightDarkToggle.addEventListener('click', () => {
   }
   lightDarkToggle.classList.toggle('btn-setting-active');
   darkModeStatus = !darkModeStatus; // toggle it.
+})
+
+backgroundSquares.forEach( (square) => {
+  square.addEventListener('mouseover', (e) => {
+    console.log(e.target)
+    console.log(square.childNodes)
+    square.querySelector('.foreground-square').classList.add('show');
+  })
 })

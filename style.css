@@ -94,10 +94,11 @@ main {
 
 footer {
   min-height: var(--footer-min-height);
-  background-color: rgb(35, 35, 35);
-  color: white;
+  background-color: var(--bg-color-default);
+  color: var(--text-color-default);
   flex-wrap: wrap;
   gap: 40px;
+  filter: invert(1);
 }
 
 .footer-nav {
@@ -263,6 +264,7 @@ p {
   .top-left-square, .top-right-square, .bottom-left-square, .bottom-right-square{
     border-bottom: 4px solid var(--crosshair-border-color);
     width: 100%;
+    height: calc(100vw - 40px)
   }
 
 }

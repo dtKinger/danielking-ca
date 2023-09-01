@@ -5,14 +5,14 @@
 :root{
   --header-min-height: 5vh;
   --footer-min-height: 5vh;
-  --text-color-light-mode: rgb(56, 56, 56);
+  --text-color-light-mode: rgb(35, 35, 35);
   --text-color-dark-mode: rgb(255, 255, 255);
-  --bg-gradient-light-mode: radial-gradient(circle, rgba(255,252,85,0.4) 0%, rgba(255,255,255,1) 66%);
-  --bg-gradient-dark-mode: linear-gradient(0deg, rgba(20,30,40,1) 0%, rgba(56,56,56,1) 100%);
+  /* --bg-gradient-light-mode: radial-gradient(circle, rgba(255,252,85,0.4) 0%, rgba(255,255,255,1) 66%);
+  --bg-gradient-dark-mode: linear-gradient(0deg, rgba(20,30,40,1) 0%, rgba(35, 35, 35, 1) 100%); */
   --bg-color-light-mode: rgb(255, 255, 255);
-  --bg-color-dark-mode: rgb(56, 56, 56);
-  --text-shadow-light-mode: 2px 2px 2px white;
-  --text-shadow-dark-mode: 2px 2px 2px rgb(56, 56, 56);
+  --bg-color-dark-mode: rgb(35, 35, 35);
+  --accent-color-light-mode: rgb(35, 35, 35);
+  --accent-color-dark-mode: rgb(255, 255, 255);
 
   font-size: 18px;
   color: var(--text-color-light-mode);
@@ -21,7 +21,7 @@
 }
 
 div {
-  border: 1px solid red; /* for development only */
+  /* border: 1px solid red; for development only */
 }
 
 * {
@@ -39,9 +39,18 @@ a:hover {
   text-decoration: underline;
 }
 
+button{
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  color: var(--accent-color-dark-mode);
+  background-color: var(--accent-color-light-mode);
+  cursor: pointer;
+}
+
 body {
   min-height: 100vh;
-  background: var(--bg-gradient-light-mode);
+  background: var(--bg-color-light-mode);
 }
 
 body > * { /* header, main, footer */
@@ -54,10 +63,16 @@ header {
   justify-content: space-between;
 }
 
+.fixed-header {
+  position: fixed;
+  width: 100%;
+}
+
 header > div {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
 }
 
 .nav-theme-select {
@@ -71,7 +86,7 @@ main {
 
 footer {
   min-height: var(--footer-min-height);
-  background-color: rgb(56, 56, 56);
+  background-color: rgb(35, 35, 35);
   color: white;
 }
 
@@ -82,9 +97,8 @@ footer {
 }
 
 h1 {
-  text-shadow: var(--text-shadow-light-mode);
   padding: 10px;
-  font-size: 3em;
+  font-size: 2.5em;
   margin-bottom: 20px;
 }
 
@@ -118,7 +132,44 @@ p {
   
 }
 
+.main-container{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
 
+.top-left-square, .top-right-square, .bottom-left-square, .bottom-right-square {
+  display: flex;
+  flex: 1;
+  min-width: calc(50vw - 20px);
+  max-width: 600px;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-left-square{
+  
+  
+}
+
+.top-right-square{
+  border-left:4px solid black;
+  
+}
+
+.bottom-left-square{
+  border-top: 4px solid black;
+}
+
+.bottom-right-square{
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+}
+
+.square-wrapper {
+  display: flex;
+}
 
 /* Utils */
 

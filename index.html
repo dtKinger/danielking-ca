@@ -11,25 +11,53 @@
 </head>
 <body>
   <header>
-    <div class="nav-theme-select">
-      <select id="theme-select" value="theme-select">
-        <option name="light-mode" id="light-mode">Light mode</option>
-        <option name="light-mode" id="light-mode">Dark mode</option>
-      </select>
-    </div>
-    <div class="nav-name">
+
+    <div class="nav-name flex flex-column">
       <h1 class="flex justify-center align-center">Daniel King</h1>
+      <div class="nav-theme-select">
+        <button class="theme-toggle" id="light-dark-mode">Dark mode</button>
+      </div>
     </div>
+    
     <div class="nav-links">
-      
+      <div class="hamburger"></div>
+      <nav id="mobile-nav">
+        <ul class="list">
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
     </div>
   </header>
   <main>
-    
+    <div class="main-container">
+      <div class="square-wrapper">
+        <div class="square top-left-square">
+          <p>Builds</p>
+        </div>
+        <div class="square top-right-square">
+          <p>Github</p>
+        </div>
+      </div>
+      
+      <div class="square-wrapper">
+        <div class="square bottom-left-square">
+          <p>About</p>
+        </div>
+        <div class="square bottom-right-square">
+          <p>Social</p>
+        </div>
+      </div>
+      
+
+    </div>
   </main>
   <footer class="flex flex-apart">
     <div class="footer-projects">
-      <label for="footer-nav"><h3>Projects</h3></label>
+      <h3>Projects</h3> 
       <nav role="footer-navigation" id="footer-navigation" class="footer-nav gap-10">
         <a href="https://getonly.ca">getonly.ca</a>
         <a href="https://dtkinger.github.io/battlewich">Battle'Wich</a>
@@ -50,6 +78,6 @@
       </div>
     </div>
   </footer>
-  <script src="scripts.js"></script>
+  <script src="scripts.js" type="module"></script>
 </body>
 </html>

@@ -29,10 +29,29 @@ div {
 a, a:visited {
   text-decoration: none;
   color: inherit;
+  transition: 0.3s ease-in-out;
 }
 
-a:hover {
-  text-decoration: underline;
+.link-underline-animation{
+  position: relative;
+}
+
+.link-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color-default);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 

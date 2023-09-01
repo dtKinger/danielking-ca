@@ -26,12 +26,14 @@ lightDarkToggle.addEventListener('click', () => {
     document.body.style.setProperty('color', 'var(--text-color-dark-mode)');
     buttons.forEach((button) => button.style.setProperty('background-color', 'var(--accent-color-dark-mode)'))
     buttons.forEach((button) => button.style.setProperty('color', 'var(--accent-color-light-mode)'))
+    document.documentElement.style.setProperty('--crosshair-border-color', 'white')
     darkModeToggle.textContent = 'Light mode';
   } else if (darkModeStatus === true){
     document.body.style.setProperty('background', 'var(--bg-color-light-mode)'); 
     document.body.style.setProperty('color', 'var(--text-color-light-mode)');
     buttons.forEach((button) => button.style.setProperty('background-color', 'var(--accent-color-light-mode)'))
     buttons.forEach((button) => button.style.setProperty('color', 'var(--accent-color-dark-mode)'))
+    document.documentElement.style.setProperty('--crosshair-border-color', 'black')
     darkModeToggle.textContent = 'Dark mode';
   }
   darkModeStatus = !darkModeStatus; // toggle it.

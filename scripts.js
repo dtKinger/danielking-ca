@@ -3,6 +3,7 @@
 
 let darkModeStatus = false;
 
+
 import { mobileNav } from "./nav-menu.js"
 // import './nav-menu.css';
 
@@ -17,8 +18,16 @@ const lightDarkToggle = document.querySelector('.theme-toggle')
 const heading1 = document.querySelector('h1')
 const buttons = document.querySelectorAll('button')
 const darkModeToggle = document.querySelector('.theme-toggle')
+const fixHeaderBtn = document.querySelector('.fixed-header-btn')
+const crosshairContainer = document.querySelector('.crosshair-container')
 
-header.classList.toggle('fixed-header')
+fixHeaderBtn.addEventListener('click', () => {
+  header.classList.toggle('fixed-header')
+  crosshairContainer.classList.toggle('vertical-buffer');
+  fixHeaderBtn.classList.toggle('btn-setting-active');
+  
+})
+
 
 lightDarkToggle.addEventListener('click', () => {
   if (darkModeStatus === false){
@@ -34,5 +43,6 @@ lightDarkToggle.addEventListener('click', () => {
     document.documentElement.style.setProperty('--crosshair-border-color', 'rgb(35, 35, 35)')
     darkModeToggle.textContent = 'Dark mode';
   }
+  lightDarkToggle.classList.toggle('btn-setting-active');
   darkModeStatus = !darkModeStatus; // toggle it.
 })

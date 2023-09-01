@@ -226,6 +226,10 @@ p {
   .crosshair-container{
     margin: 0 auto;
   }
+
+  .vertical-buffer {
+    margin-top: 20vh;
+  }
 }
 
 @media screen and (max-width: 600px){

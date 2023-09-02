@@ -19,6 +19,8 @@ const heading1 = document.querySelector('h1')
 const buttons = document.querySelectorAll('button')
 const darkModeToggle = document.querySelector('.theme-toggle')
 const fixHeaderBtn = document.querySelector('.fixed-header-btn')
+const layoutContainer = document.querySelector('.layout-change')
+const profileContainer = document.querySelector('.profile')
 const crosshairContainer = document.querySelector('.crosshair-container')
 const backgroundSquares = document.querySelectorAll('.square');
 const foregroundSquares = document.querySelectorAll('.foreground-square');
@@ -27,7 +29,7 @@ const hoverSpans = document.querySelectorAll('.hover-title');
 
 fixHeaderBtn.addEventListener('click', () => {
   header.classList.toggle('fixed-header')
-  crosshairContainer.classList.toggle('vertical-buffer');
+  layoutContainer.classList.toggle('vertical-buffer');
   fixHeaderBtn.classList.toggle('btn-setting-active');
 })
 

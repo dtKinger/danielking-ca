@@ -110,7 +110,6 @@ header > div {
 
 .nav-theme-select {
   display: flex;
-  flex-direction: column;
 }
 
 main {
@@ -155,12 +154,30 @@ p {
 }
 
 .profile{
-  margin-bottom: 40px; 
+  background-color: var(--bg-color-default);
+  border: 2px solid var(--accent-color-default);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  line-height: 1.5;
 }
 
-.profile > h2 {
+.profile > h1 {
   margin-bottom: 20px; 
 }
+
+.icon-svg{
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.sub-greeting {
+  font-size: 0.5em;
+  color: var(--text-color-default);
+  opacity: 0.6;
+}
+
 
 .my-handle {
   align-items: flex-end;
@@ -267,6 +284,7 @@ p {
 }
 
 .hover-title{
+  font-size: 0.7em;
   background-color: var(--bg-color-default);
   color: var(--text-color-default);
   filter: invert(1);
@@ -283,6 +301,11 @@ p {
   text-align: center;
 }
 
+.list.expand {
+  border: 1px solid var(--accent-color-default);
+
+}
+
 /* Utils */
 
 .hide{
@@ -292,9 +315,6 @@ p {
 .show{
   display: flex;
 }
-
-
-
 
 .flex {
   display: flex;
@@ -328,20 +348,14 @@ p {
   gap: 40px;
 }
 
+.layout-change{
+  display: flex;
+  flex-direction: column;
+}
+
 /* End Utils */
 
 /* Media queries*/
-
-@media screen and (min-width: 601px){
-  
-  .crosshair-container{
-    margin: 0 auto;
-  }
-
-  .vertical-buffer {
-    margin-top: 20vh;
-  }
-}
 
 @media screen and (max-width: 600px){
   .crosshair-container{
@@ -385,3 +399,51 @@ p {
     text-align: center;
   }
 }
+/* End of Mobile */
+
+
+/* Tablet  / Windowed laptop */ 
+
+@media screen and (min-width: 601px){
+  
+  .crosshair-container{
+    margin: 0 auto;
+  }
+
+  .vertical-buffer {
+    margin-top: 15vh;
+  }
+}
+
+/* End Tablet */
+
+/* Laptop Full screen ++ */
+
+@media screen and (min-width: 1200px){
+
+  header{
+    justify-content: center;  
+  }
+
+  .nav-links{
+    justify-content: center;
+  }
+
+  .layout-change{
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .profile{
+    max-height: 500px;
+    max-width: 800px;
+    overflow: scroll;
+    margin: auto auto;
+  }
+
+  .vertical-buffer {
+    margin-top: 5vh;
+  }
+
+}
+

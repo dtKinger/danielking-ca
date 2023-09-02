@@ -4,6 +4,10 @@
   gap: 20px;
 }
 
+.nav-links{
+  justify-content: flex-end;
+}
+
 .hamburger{
   display: none;
   position: relative;
@@ -82,13 +86,16 @@
 
 
   .list.expand{
+    position: absolute;
     display: flex;
     color: black;
     background-color: white;
     transition: background-color 200ms ease-in-out;
     opacity: 1; /* Make the list visible with opacity 1 */
+    top: 60px;
+    right: 10px;
+    border-radius: 5px;
   }
-
 
 }
 

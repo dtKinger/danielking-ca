@@ -232,6 +232,10 @@ p {
 
 }
 
+.preview-item:hover{
+  
+}
+
 .crosshair-image{
   
 }
@@ -246,6 +250,29 @@ p {
 .build-preview{
   width: calc(50% - var(--build-gap));
   height: calc(50% - var(--build-gap));
+  transition: 0.2s ease-in-out;
+}
+
+.bp-top-left:hover{
+  transform: translateX(35%) translateY(35%) scaleX(180%) scaleY(180%);
+}
+
+.bp-top-right:hover{
+  transform: scaleX(180%) scaleY(180%) translateX(-22%) translateY(22%);
+}
+.bp-bottom-left:hover{
+  transform: scaleX(180%) scaleY(180%) translateX(22%) translateY(-22%);
+}
+.bp-bottom-right:hover{
+  transform: scaleX(180%) scaleY(180%) translateX(-22%) translateY(-22%);
+}
+
+.build-preview:hover{
+  
+}
+
+.hover-title-container{
+
 }
 
 .hover-title{
@@ -253,10 +280,12 @@ p {
   color: var(--text-color-default);
   filter: invert(1);
   position: absolute;
-  top: 25%;
-  left: 20%;
+  top: 40%;
+  left: 25%;
   opacity:0;
   transition: 0.5s ease-in-out;
+  padding:4px 8px;
+  border-radius: 8px;
 }
 
 /* Utils */

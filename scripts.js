@@ -52,20 +52,20 @@ lightDarkToggle.addEventListener('click', () => {
 
 backgroundSquares.forEach((square) => {
   square.addEventListener('mouseover', () => {
-    trackMouse(square);
+    enhanceSquare(square);
   });
 
   square.addEventListener('mouseout', () => {
-    stopTrackingMouse(square);
+    minimizeSquare(square);
   });
 });
 
-function trackMouse(square) {
+function enhanceSquare(square) {
   const hoveredSquare = square.querySelector('.foreground-square');
   hoveredSquare.classList.add('show');
 }
 
-function stopTrackingMouse(square) {
+function minimizeSquare(square) {
   const hoveredSquare = square.querySelector('.foreground-square');
   hoveredSquare.classList.remove('show')
 

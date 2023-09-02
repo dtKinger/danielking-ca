@@ -22,6 +22,8 @@ const fixHeaderBtn = document.querySelector('.fixed-header-btn')
 const crosshairContainer = document.querySelector('.crosshair-container')
 const backgroundSquares = document.querySelectorAll('.square');
 const foregroundSquares = document.querySelectorAll('.foreground-square');
+const previewItems = document.querySelectorAll('.preview-item')
+const hoverSpans = document.querySelectorAll('.hover-title');
 
 fixHeaderBtn.addEventListener('click', () => {
   header.classList.toggle('fixed-header')
@@ -48,10 +50,33 @@ lightDarkToggle.addEventListener('click', () => {
   darkModeStatus = !darkModeStatus; // toggle it.
 })
 
-backgroundSquares.forEach( (square) => {
-  square.addEventListener('mouseover', (e) => {
-    console.log(e.target)
-    console.log(square.childNodes)
-    square.querySelector('.foreground-square').classList.add('show');
+backgroundSquares.forEach((square) => {
+  square.addEventListener('mouseover', () => {
+    trackMouse(square);
+  });
+
+  square.addEventListener('mouseout', () => {
+    stopTrackingMouse(square);
+  });
+});
+
+function trackMouse(square) {
+  const hoveredSquare = square.querySelector('.foreground-square');
+  hoveredSquare.classList.add('show');
+}
+
+function stopTrackingMouse(square) {
+  const hoveredSquare = square.querySelector('.foreground-square');
+  hoveredSquare.classList.remove('show')
+
+}
+
+previewItems.forEach((item) => {
+  item.addEventListener('mouseover', (e) => {
+    item.querySelector('.hover-title').style.setProperty('opacity', '1');
+  })
+
+  item.addEventListener('mouseout', (e) => {
+    item.querySelector('.hover-title').style.setProperty('opacity', '1');
   })
 })

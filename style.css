@@ -210,16 +210,55 @@ p {
 }
 
 .foreground-square{
-  z-index: 2;
+  display: flex;
+  z-index: 4;
   position: absolute;
   width: 100%;
   height: 100%;
   transition: 0.5s;
+  border: 2px solid black;
+  flex-wrap: wrap;
 }
 
 .foreground-square:hover{
-  background-color: rgba(0, 255, 0, 1);
+  background-color: var(--bg-color-default);
+  
+  z-index: 4;
 }
+
+.preview-item {
+
+}
+
+.crosshair-image{
+  
+}
+
+.build-image{
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color-default);
+}
+
+.build-preview{
+  width: 50%;
+  height: 50%;
+}
+
+.hover-title{
+  background-color: var(--bg-color-default);
+  color: var(--text-color-default);
+  filter: invert(1);
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  opacity:0;
+  transition: 0.5s ease-in-out;
+}
+
+/* Utils */
 
 .hide{
   display: none;
@@ -231,7 +270,6 @@ p {
 
 
 
-/* Utils */
 
 .flex {
   display: flex;

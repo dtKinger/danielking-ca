@@ -77,6 +77,6 @@ previewItems.forEach((item) => {
   })
 
   item.addEventListener('mouseout', (e) => {
-    item.querySelector('.hover-title').style.setProperty('opacity', '1');
+    item.querySelector('.hover-title').style.setProperty('opacity', '0');
   })
 })

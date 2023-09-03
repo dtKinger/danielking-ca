@@ -26,9 +26,11 @@ const backgroundSquares = document.querySelectorAll('.square');
 const foregroundSquares = document.querySelectorAll('.foreground-square');
 const previewItems = document.querySelectorAll('.preview-item')
 const hoverSpans = document.querySelectorAll('.hover-title');
+const ghostHeader = document.querySelector('.ghost-header');
 
 fixHeaderBtn.addEventListener('click', () => {
-  header.classList.toggle('fixed-header')
+  header.classList.toggle('fixed-header');
+  ghostHeader.classList.toggle('show');
   layoutContainer.classList.toggle('vertical-buffer');
   fixHeaderBtn.classList.toggle('btn-setting-active');
 })

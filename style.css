@@ -3,7 +3,7 @@
 @import "./nav-menu.css";
 
 :root{
-  --header-min-height: 5vh;
+  --header-min-height: 15vh;
   --footer-min-height: 5vh;
   --text-color-default: rgb(35, 35, 35);
   --bg-color-default: rgb(255, 255, 255);
@@ -100,7 +100,7 @@ header {
 }
 
 .vertical-buffer{
-  margin-top: 20vh;
+  margin-top: 15vh;
 }
 
 header > div {
@@ -116,6 +116,10 @@ header > div {
 
 main {
   min-height: calc(100vh - var(--header-min-height) - var(--footer-min-height));
+}
+
+.ghost-header{
+  min-height: 10vh;
 }
 
 footer {

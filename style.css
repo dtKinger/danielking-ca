@@ -118,10 +118,6 @@ main {
   min-height: calc(100vh - var(--header-min-height) - var(--footer-min-height));
 }
 
-.ghost-header{
-  min-height: 10vh;
-}
-
 footer {
   min-height: var(--footer-min-height);
   background-color: var(--bg-color-default);
@@ -442,6 +438,10 @@ p {
 
   main {
     min-height: min-content;
+  }
+
+  .ghost-header{
+    min-height: 10vh;
   }
 
   footer{

@@ -73,6 +73,8 @@ button{
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   min-width: 320px;
   background: var(--bg-color-default);
@@ -433,6 +435,14 @@ p {
 /* Laptop Full screen ++ */
 
 @media screen and (min-width: 1200px){
+
+  main {
+    min-height: min-content;
+  }
+
+  footer{
+    margin-top: auto;
+  }
 
   header{
     justify-content: center;  

@@ -458,7 +458,7 @@ p {
   }
 
   .profile{
-    max-height: 500px;
+    max-height: 520px;
     max-width: 800px;
     overflow: scroll;
     margin: auto auto;

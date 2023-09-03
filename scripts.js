@@ -65,12 +65,6 @@ previewItems.forEach((item) => {
   })
 })
 
-githubCalendar.addEventListener('mouseover', () => {
-  githubCalendar.classList.toggle('show');
-})
-
-
-
 // IIFE to set dark mode 
 let setDarkLightMode = ( () => {
   if (window.matchMedia) {

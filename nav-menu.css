@@ -92,7 +92,7 @@
     background-color: white;
     transition: background-color 200ms ease-in-out;
     opacity: 1; /* Make the list visible with opacity 1 */
-    top: 60px;
+    top: 70px;
     right: 10px;
     border-radius: 5px;
   }

@@ -276,10 +276,13 @@ p {
   border: 2px solid var(--accent-color-default);
 }
 
+.preview-item{
+  transition: 0.2s ease-in-out;
+}
+
 .build-preview{
   width: calc(50% - var(--build-gap));
   height: calc(50% - var(--build-gap));
-  transition: 0.2s ease-in-out;
 }
 
 .bp-top-left:hover{

@@ -3,7 +3,6 @@
 
 let darkModeStatus = false;
 
-
 import { mobileNav } from "./nav-menu.js"
 // import './nav-menu.css';
 
@@ -36,7 +35,9 @@ fixHeaderBtn.addEventListener('click', () => {
 })
 
 
-lightDarkToggle.addEventListener('click', () => {
+lightDarkToggle.addEventListener('click', toggleDarkMode)
+
+function toggleDarkMode () {
   if (darkModeStatus === false){
     document.documentElement.style.setProperty('--text-color-default', 'white')
     document.documentElement.style.setProperty('--bg-color-default', 'rgb(35, 35, 35)')
@@ -52,7 +53,7 @@ lightDarkToggle.addEventListener('click', () => {
   }
   lightDarkToggle.classList.toggle('btn-setting-active');
   darkModeStatus = !darkModeStatus; // toggle it.
-})
+}
 
 backgroundSquares.forEach((square) => {
   square.addEventListener('mouseover', () => {
@@ -84,3 +85,15 @@ previewItems.forEach((item) => {
     item.querySelector('.hover-title').style.setProperty('opacity', '0');
   })
 })
+
+
+
+if (window.matchMedia) {
+  // check device prefers dark mode
+  const query = window.matchMedia('(prefers-color-scheme: dark)');
+  // if prefers: dark mode, run the click function
+  if (query.matches){
+    toggleDarkMode();
+  }
+}
+

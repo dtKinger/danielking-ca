@@ -319,17 +319,48 @@ p {
 
 }
 
+
+
+.github-layout {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+                  "1"
+                  "2"
+                  "2";
+}
+
+.github-layout > div {
+  padding: 4px;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color-default);
+}
+/* github preview-item div styles */
+.github-calendar{
+  background-color: var(--bg-color-default);
+  overflow-x: scroll;
+  transition: 0.3 ease-in-out;
+}
 /* github cal fade in*/ 
 .embedded-github{
-  opacity: 0;
+  /* opacity: 0; */
   transition: 0.3s ease-in-out;
 }
 
-/* github preview-item div styles */
-.github-calendar{
-  overflow-x: scroll;
+.github-calendar:hover{
+  z-index: 5;
+  transform: translateX(-20%) translateY(20%) scaleX(140%) scaleY(140%);
 }
 
+.pullshark-container:hover{
+  
+}
+
+.pull-shark-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
 
 /* Utils */
 

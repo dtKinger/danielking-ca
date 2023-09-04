@@ -2,6 +2,7 @@
 // import './carousel.css';
 
 let darkModeStatus = false;
+let stickyHeaderActive = false;
 
 import { mobileNav } from "./nav-menu.js"
 // import './nav-menu.css';
@@ -29,7 +30,24 @@ jumpLinks.forEach((link) => {
     e.preventDefault(); // test links without this too
     let hash = e.target.hash;
     let destination = document.getElementById(`${hash.slice(1, hash.length)}`)
-    destination.scrollIntoView({behavior: "smooth", block: "start"});
+    if (stickyHeaderActive === false){
+      destination.scrollIntoView(
+        {
+          behavior: "smooth", block: "start"
+        })  
+    } else if (stickyHeaderActive === true){
+      destination.scrollIntoView(
+        {
+          behavior: "instant", block: "start"
+        })
+        window.scrollTo(
+          {
+            top: window.scrollY - 110,
+            left: 0,
+            behavior: "smooth",
+          }
+        )
+     }   
   })
 })
 
@@ -40,9 +58,8 @@ fixHeaderBtn.addEventListener('click', () => {
   ghostHeader.classList.toggle('show');
   layoutContainer.classList.toggle('vertical-buffer');
   fixHeaderBtn.classList.toggle('btn-setting-active');
+  stickyHeaderActive = !stickyHeaderActive;
 })
-
-
 
 
 backgroundSquares.forEach((square) => {

@@ -104,7 +104,10 @@ let setDarkLightMode = ( () => {
     const query = window.matchMedia('(prefers-color-scheme: dark)');
     // if prefers: dark mode, run the click function
     if (query.matches){
+      console.log(`Dark mode preference detected`)
       toggleDarkMode();
+    } else {
+      console.log(`No preference for dark mode detected.`)
     }
   }
 })()

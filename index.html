@@ -23,19 +23,21 @@
       <div class="hamburger"></div>
       <nav id="mobile-nav">
         <ul class="list">
-          <li><a class="link-underline-animation" href="">About</a></li>
-          <li><a class="link-underline-animation" href="">Contact</a></li>
-          <li><a class="link-underline-animation" href="">Blog</a></li>
-          <li><a class="link-underline-animation" href="">Projects</a></li>
+          <li><a class="link-underline-animation jump-link" href="/index.html#home">Home</a></li>
+          <li><a class="link-underline-animation jump-link" href="/index.html#profile">About</a></li>
+          <li><a class="link-underline-animation jump-link" href="/index.html#projects">Projects</a></li>
+          <!-- <li><a class="link-underline-animation" href="">Blog</a></li> -->
+          <li><a class="link-underline-animation" href="/page/contact.html">Contact</a></li>
+          
         </ul>
       </nav>
     </div>
     </div>
   </header>
-  <main>
+  <main id="home">
     <div class="ghost-header hide"></div>
     <div class="layout-change">
-      <div class="profile">
+      <div id="profile" class="profile">
         <h2>Daniel King <span class="sub-greeting">Hi there, I'm Daniel.</span></h2>
         <div class="profile-timeline"><p>– 2012 –</p> <p>– 2017 –</p> <p>– 2022 –</p></div>
         <div class="profile-grid-cols">
@@ -53,7 +55,7 @@
       </div>
       <div class="crosshair-container">
         <div class="square-wrapper">
-          <div class="square top-left-square">
+          <div id="projects" class="square top-left-square">
             <p>Builds</p>
             <div class="foreground-square hide-a-flex">
               <div class="preview-item build-preview bp-top-left" ontouchstart=""><a href="https://getonly.ca" target="_blank"><span class="hover-title">getonly.ca <img class="icon-svg" src="./images/svgs_feathericons/external-link.svg"></span><img class="crosshair-image build-image" src="./images/builds/getonly.ca-preview.png" alt="Snapshot of the getonly.ca website"></a></div>
@@ -66,8 +68,8 @@
             <p>Github</p>
             <div class="foreground-square hide-a-flex">
               <div class="github-layout">
-                <div class="preview-item github-calendar" ontouchstart=""><a href="https://github.com/dtKinger" target="_blank"><span class="hover-title">@dtKinger <img class="icon-svg" src="./images/svgs_feathericons/external-link.svg"></span><img class="embedded-github" src="http://ghchart.rshah.org/dtKinger" alt="dtKingers's Github commit github-calendar"/></a></div>
-                <div class="preview-item pullshark-container" ontouchstart=""><a href="https://github.com/dtKinger" target="_blank"><span class="hover-title">@dtKinger <img class="icon-svg" src="./images/svgs_feathericons/external-link.svg"></span><img class="pull-shark-img" src="./images/github/pull-shark-adapted.jpg" alt="dtKinger's Pullshark achievement"/></a></div>
+                <div class="preview-item github-calendar" ontouchstart=""><a href="https://github.com/dtKinger" target="_blank"><span class="hover-title zoom13">@dtKinger <img class="icon-svg" src="./images/svgs_feathericons/external-link.svg"></span><img class="embedded-github" src="http://ghchart.rshah.org/dtKinger" alt="dtKingers's Github commit github-calendar"/></a></div>
+                <div class="preview-item pullshark-container" ontouchstart=""><a href="https://github.com/dtKinger" target="_blank"><span class="hover-title zoom13">@dtKinger <img class="icon-svg" src="./images/svgs_feathericons/external-link.svg"></span><img class="pull-shark-img" src="./images/github/pull-shark-adapted.jpg" alt="dtKinger's Pullshark achievement"/></a></div>
                 <div class="preview-item github-subtext" ontouchstart=""><p><a target="_blank" href="https://github.com/dtKinger" class="link-underline-animation">See more on github.com <img class="icon-svg" src="./images/svgs_feathericons/external-link.svg"></a></p></div>
               </div>
             </div>
@@ -78,7 +80,7 @@
           <div class="square bottom-left-square">
             <p>About</p>
             <div class="foreground-square hide-a-flex">
-              <div class="preview-item word-cloud-container"><a href="/page/about-me" class="link-underline-animation"><img src="./images/about/dk-word-cloud.png" class="word-cloud" alt=""> <span class="hover-title">About me <img src="./images/svgs_feathericons/external-link.svg" alt="Link to my about page" class="icon-svg"></span></a></div>
+              <div class="preview-item word-cloud-container"><a href="/page/about.html" class="link-underline-animation"><img src="./images/about/dk-word-cloud.png" class="word-cloud" alt=""> <span class="hover-title zoom13">About me <img src="./images/svgs_feathericons/external-link.svg" alt="Link to my about page" class="icon-svg"></span></a></div>
             </div>
           </div>
           <div class="square bottom-right-square">

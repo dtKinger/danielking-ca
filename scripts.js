@@ -21,6 +21,17 @@ const backgroundSquares = document.querySelectorAll('.square');
 const previewItems = document.querySelectorAll('.preview-item');
 const ghostHeader = document.querySelector('.ghost-header');
 const githubCalendar = document.querySelector('.github-calendar');
+const jumpLinks = document.querySelectorAll('.jump-link');
+
+
+jumpLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault(); // test links without this too
+    let hash = e.target.hash;
+    let destination = document.getElementById(`${hash.slice(1, hash.length)}`)
+    destination.scrollIntoView({behavior: "smooth", block: "start"});
+  })
+})
 
 lightDarkToggle.addEventListener('click', toggleDarkMode)
 

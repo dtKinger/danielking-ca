@@ -106,16 +106,16 @@ let setDarkLightMode = ( () => {
     // check device prefers dark mode
     const query = window.matchMedia('(prefers-color-scheme: dark)');
     // if prefers: dark mode, run the click function
-    if (query.matches){
-      console.log(`Dark mode preference detected`)
-      toggleDarkMode();
-    } else if (localStorage.getItem("darkMode")){
+    if (localStorage.getItem("darkMode")){
       console.log(`No OS dark mode preference detected, loading localStorage...`)
         if (localStorage.getItem("darkMode") === "true" &&
             darkModeStatus === false){
           toggleDarkMode();
         }
-    } else {
+    } else if (query.matches){
+      console.log(`Dark mode preference detected`)
+      toggleDarkMode();
+    }  else {
 
     }
       

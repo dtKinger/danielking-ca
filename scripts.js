@@ -57,13 +57,15 @@ function minimizeSquare(square) {
 
 previewItems.forEach((item) => {
   item.addEventListener('mouseover', (e) => {
-    item.querySelector('.hover-title').style.setProperty('opacity', '1');
-    // item.querySelector('.embedded-github').style.setProperty('opacity', '1');
+    if (item.querySelector('.hover-title')){
+      item.querySelector('.hover-title').style.setProperty('opacity', '1');
+    }
   })
 
   item.addEventListener('mouseout', (e) => {
-    item.querySelector('.hover-title').style.setProperty('opacity', '0');
-    // item.querySelector('.embedded-github').style.setProperty('opacity', '0');
+    if (item.querySelector('.hover-title')){
+      item.querySelector('.hover-title').style.setProperty('opacity', '0');
+    }
   })
 })
 

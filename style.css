@@ -10,6 +10,7 @@
   --accent-color-default: rgb(35, 35, 35);
   --crosshair-border-color: rgb(35, 35, 35);
   --build-gap: 6px;
+  --filter-inversion-state: 0;
 
   font-size: 18px;
   color: var(--text-color-default);
@@ -183,7 +184,9 @@ p {
   display: inline-block;
   width: 1em;
   height: 1em;
+  filter: invert(var(--filter-inversion-state));
 }
+
 
 .sub-greeting {
   font-size: 0.5em;

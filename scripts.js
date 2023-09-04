@@ -89,12 +89,14 @@ function toggleDarkMode () {
     document.documentElement.style.setProperty('--bg-color-default', 'rgb(35, 35, 35)')
     document.documentElement.style.setProperty('--accent-color-default', 'white')
     document.documentElement.style.setProperty('--crosshair-border-color', 'white')
+    document.documentElement.style.setProperty('--filter-inversion-state', '1')
     darkModeToggle.textContent = 'Light mode';
   } else if (darkModeStatus === true){
     document.documentElement.style.setProperty('--text-color-default', 'rgb(35, 35, 35)')
     document.documentElement.style.setProperty('--bg-color-default', 'white')
     document.documentElement.style.setProperty('--accent-color-default', 'rgb(35, 35, 35)')
     document.documentElement.style.setProperty('--crosshair-border-color', 'rgb(35, 35, 35)')
+    document.documentElement.style.setProperty('--filter-inversion-state', '1')
     darkModeToggle.textContent = 'Dark mode';
   }
   lightDarkToggle.classList.toggle('btn-setting-active');

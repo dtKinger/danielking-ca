@@ -93,6 +93,7 @@ header {
 }
 
 .fixed-header {
+  z-index: 10;
   position: fixed;
   width: 100%;
   border-bottom: 1px dashed grey;
@@ -379,6 +380,17 @@ p {
 .pull-shark-img{
   width: 100%;
   border-radius: 10px;
+}
+
+.word-cloud-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.word-cloud{
+  width: 100%;
 }
 
 /* Utils */

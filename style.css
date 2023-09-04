@@ -355,7 +355,7 @@ p {
 
 .github-calendar:hover{
   z-index: 5;
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .pullshark-container{
@@ -365,7 +365,7 @@ p {
 
 .pullshark-container:hover{
   z-index: 5;
-  scale: 1.06;
+  scale: 1.05;
 }
 .github-subtext{
   
@@ -373,7 +373,7 @@ p {
 }
 .github-subtext:hover{
   z-index:5;
-  scale: 1.06;
+  scale: 1.05;
 }
 
 .pull-shark-img{

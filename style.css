@@ -393,6 +393,15 @@ p {
   width: 100%;
 }
 
+
+.tablet-and-smaller{
+  display: block;
+}
+
+.laptop-and-bigger{
+  display: none;
+}
+
 /* Utils */
 
 .zoom13 {
@@ -447,6 +456,7 @@ p {
   display: flex;
   flex-direction: column;
 }
+
 
 /* End Utils */
 
@@ -555,6 +565,14 @@ p {
   }
   .vertical-buffer {
     margin-top: 8vh;
+  }
+
+  .tablet-and-smaller{
+    display: none;
+  }
+
+  .laptop-and-bigger{
+    display: block;
   }
 
 }

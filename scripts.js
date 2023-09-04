@@ -27,7 +27,9 @@ const jumpLinks = document.querySelectorAll('.jump-link');
 
 jumpLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
-    e.preventDefault(); // test links without this too
+    if(window.location.pathname === '/'){
+      e.preventDefault(); // test links without this too
+    }
     let hash = e.target.hash;
     let destination = document.getElementById(`${hash.slice(1, hash.length)}`)
     if (stickyHeaderActive === false){

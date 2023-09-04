@@ -99,6 +99,7 @@ previewItems.forEach((item) => {
 
 // IIFE to set dark mode 
 let setDarkLightMode = ( () => {
+
   if (window.matchMedia) {
     // check device prefers dark mode
     const query = window.matchMedia('(prefers-color-scheme: dark)');
@@ -106,10 +107,18 @@ let setDarkLightMode = ( () => {
     if (query.matches){
       console.log(`Dark mode preference detected`)
       toggleDarkMode();
+    } else if (localStorage.getItem("darkMode")){
+      console.log(`No OS dark mode preference detected, loading localStorage...`)
+        if (localStorage.getItem("darkMode") === "true" &&
+            darkModeStatus === false){
+          toggleDarkMode();
+        }
     } else {
-      console.log(`No preference for dark mode detected.`)
+
     }
+      
   }
+  
 })()
 
 
@@ -132,4 +141,6 @@ function toggleDarkMode () {
   }
   lightDarkToggle.classList.toggle('btn-setting-active');
   darkModeStatus = !darkModeStatus; // toggle it.
+  localStorage.setItem('darkMode', darkModeStatus.toString());
+
 }

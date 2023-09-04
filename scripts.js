@@ -44,7 +44,7 @@ jumpLinks.forEach((link) => {
         })
         window.scrollTo(
           {
-            top: window.scrollY - 110,
+            top: window.scrollY - 120,
             left: 0,
             behavior: "smooth",
           }

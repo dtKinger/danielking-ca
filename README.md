@@ -14,3 +14,7 @@
 ## Third-party resources:
 - Github calendar embedded thanks to  [ghchart.rshah.org/](https://ghchart.rshah.org/)
 - HTML/CSS wordcloud generator by [Jason Davies](https://www.jasondavies.com/wordcloud/)
+
+## To do items:
+- On mobile, the filter: invert(1) doesn't work on the external-link SVG icons.
+- Adjusting my scrollTo by a fixed pixel amount to counter the sticky header is unbalanced across viewport widths. Need to use a variable window.ScrollY instead of a fixed 120px; 

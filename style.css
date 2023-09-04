@@ -325,7 +325,6 @@ p {
 
 .preview-item > p {
   text-align: center;
-  padding-top: 4px;
 }
 
 .github-layout {
@@ -381,6 +380,10 @@ p {
 
 /* Utils */
 
+.hide-a-flex{
+  display: none;
+}
+
 .hide{
   display: none;
 }
@@ -431,6 +434,8 @@ p {
 /* Media queries*/
 
 @media screen and (max-width: 600px){
+
+
   .crosshair-container{
     flex-direction: column;
   }
@@ -565,6 +570,14 @@ p {
     overflow: scroll;
   }
 
+}
+
+@media screen and (max-width: 1200px){
+
+  /* Don't require hover to show on mobile*/
+  .hide-a-flex{display: flex;} /* unhide */
+  .foreground-square{background-color: var(--bg-color-default)}
+  /* end anti-hover*/
 }
 
 @media screen and (min-width: 900px) and (max-width: 1199px){

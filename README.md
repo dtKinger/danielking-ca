@@ -10,6 +10,7 @@
 - Media queries
 - CSS Grid
 - Flexbox
+- localStorage
 
 ### Third-party resources:
 - Github calendar embedded thanks to  [ghchart.rshah.org/](https://ghchart.rshah.org/)

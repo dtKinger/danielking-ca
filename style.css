@@ -74,6 +74,10 @@ button{
   box-shadow: inset 2px 2px 2px 2px white;
 }
 
+.btn-not-active{
+  box-shadow: -1px -1px 1px 1px hotpink;
+}
+
 body {
   display: flex;
   flex-direction: column;

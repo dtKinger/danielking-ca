@@ -139,6 +139,7 @@ function toggleDarkMode () {
     document.documentElement.style.setProperty('--filter-inversion-state', '0')
   }
   lightDarkToggle.classList.toggle('btn-setting-active');
+  lightDarkToggle.classList.toggle('btn-not-active');
   darkModeStatus = !darkModeStatus; // toggle it.
   localStorage.setItem('darkMode', darkModeStatus.toString());
 }
@@ -147,6 +148,7 @@ function toggleStickyHeader () {
   header.classList.toggle('fixed-header');
   ghostHeader.classList.toggle('show');
   layoutContainer.classList.toggle('vertical-buffer');
+  fixHeaderBtn.classList.toggle('btn-not-active');
   fixHeaderBtn.classList.toggle('btn-setting-active');
   stickyHeaderActive = !stickyHeaderActive;
   localStorage.setItem('stickyHeader', stickyHeaderActive.toString());

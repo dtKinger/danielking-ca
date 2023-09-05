@@ -217,7 +217,6 @@ p {
 }
 
 .icon-svg{
-  display: inline-block;
   width: 1em;
   height: 1em;
   filter: invert(var(--filter-inversion-state));

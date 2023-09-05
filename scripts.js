@@ -142,6 +142,7 @@ function toggleDarkMode () {
   lightDarkToggle.classList.toggle('btn-not-active');
   darkModeStatus = !darkModeStatus; // toggle it.
   localStorage.setItem('darkMode', darkModeStatus.toString());
+  reloadInvertedSVGs();
 }
 
 function toggleStickyHeader () {
@@ -152,4 +153,26 @@ function toggleStickyHeader () {
   fixHeaderBtn.classList.toggle('btn-setting-active');
   stickyHeaderActive = !stickyHeaderActive;
   localStorage.setItem('stickyHeader', stickyHeaderActive.toString());
+}
+
+// To solve mobile not loading inverted SVGs, reload them 
+function reloadInvertedSVGs () {
+  const svgsLogoImage = document.querySelector('.logo > img');
+  const svgsIcon = document.querySelectorAll('.icon-svg');
+  const svgsSocialIcons = document.querySelectorAll('.social-icon');
+  
+  // Refresh them all without a page load by hiding/showing
+  // svgsLogoImage.style.display = 'none';
+  // svgsLogoImage.style.display = 'revert';
+  svgsLogoImage.classList.add('hide');
+  svgsLogoImage.classList.remove('hide');
+
+  svgsIcon.forEach((svg) => {
+    svg.classList.add('hide');
+    svg.classList.remove('hide');
+  })
+  svgsSocialIcons.forEach((svg) => {
+    svg.classList.add('hide');
+    svg.classList.remove('hide');
+  })
 }

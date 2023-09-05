@@ -35,19 +35,21 @@
     </div>
   </header>
   <main>
-    <h2>Contact Me</h2>
-      <form class="contact-form" action="https://formspree.io/f/moqownla" method="POST">
-        <label>
-          Your email:
-          <input type="email" name="email">
-        </label>
-        <label>
-          Your message:
-          <textarea name="message" placeholder="Hey Daniel, what made you decide to change careers?"></textarea>
-        </label>
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
-      </form>
+    <h2 class="page-title">Contact Me</h2>
+      <div class="wrapper">
+        <form class="contact-form-container" action="https://formspree.io/f/moqownla" method="POST">
+          <div class="labeled-field">
+            <label for="email"><span class="required"><sup>* </sup></span>Your email:</label>
+            <input id="email" type="email" name="email" required>
+          </div>
+          <div class="labeled-field">
+            <label for="message"><span class="required"><sup>* </sup></span>Message: </label>
+            <textarea id="message" name="message" placeholder="Hey Daniel, what made you decide to change careers?" required minlength="10" maxlength="1000"></textarea>
+          </div>
+          <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+        </form>
+      </div>
   </main>
   <footer class="flex flex-apart">
     <div class="footer-projects">

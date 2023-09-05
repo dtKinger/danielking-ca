@@ -111,7 +111,7 @@ let setDarkLightMode = ( () => {
       toggleDarkMode();
     }  else {
 
-    }   
+    }
   }
 })()
 

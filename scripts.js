@@ -162,10 +162,10 @@ function reloadInvertedSVGs () {
   const svgsSocialIcons = document.querySelectorAll('.social-icon');
   
   // Refresh them all without a page load by hiding/showing
-  // svgsLogoImage.style.display = 'none';
-  // svgsLogoImage.style.display = 'revert';
-  svgsLogoImage.classList.add('hide');
-  setTimeout( () => svgsLogoImage.classList.remove('hide'), 20);
+  
+  // If logo doesn't need it, can prevent a big jank
+  // svgsLogoImage.classList.add('hide');
+  // setTimeout( () => svgsLogoImage.classList.remove('hide'), 20);
   
   svgsIcon.forEach((svg) => {
     svg.classList.add('hide');

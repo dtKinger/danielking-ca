@@ -27,6 +27,7 @@ const jumpLinks = document.querySelectorAll('.jump-link');
 
 jumpLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
+    try{
     if(window.location.pathname === '/'){
       e.preventDefault(); // test links without this too
     }
@@ -49,7 +50,10 @@ jumpLinks.forEach((link) => {
             behavior: "smooth",
           }
         )
-     }   
+     }
+    } catch (error) {
+      console.log(error);
+    }   
   })
 })
 

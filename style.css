@@ -71,6 +71,7 @@ button{
 
 .btn-setting-active{
   background-color: hotpink;
+  box-shadow: inset 2px 2px 2px 2px white;
 }
 
 body {

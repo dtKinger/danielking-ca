@@ -15,13 +15,11 @@ mobileNav();
 
 const header = document.querySelector('header');
 const lightDarkToggle = document.querySelector('.theme-toggle');
-const darkModeToggle = document.querySelector('.theme-toggle');
 const fixHeaderBtn = document.querySelector('.fixed-header-btn');
 const layoutContainer = document.querySelector('.layout-change');
 const backgroundSquares = document.querySelectorAll('.square');
 const previewItems = document.querySelectorAll('.preview-item');
 const ghostHeader = document.querySelector('.ghost-header');
-const githubCalendar = document.querySelector('.github-calendar');
 const jumpLinks = document.querySelectorAll('.jump-link');
 
 
@@ -136,17 +134,14 @@ function toggleDarkMode () {
     document.documentElement.style.setProperty('--accent-color-default', 'white')
     document.documentElement.style.setProperty('--crosshair-border-color', 'white')
     document.documentElement.style.setProperty('--filter-inversion-state', '1')
-    darkModeToggle.textContent = 'Light mode';
   } else if (darkModeStatus === true){
     document.documentElement.style.setProperty('--text-color-default', 'rgb(35, 35, 35)')
     document.documentElement.style.setProperty('--bg-color-default', 'white')
     document.documentElement.style.setProperty('--accent-color-default', 'rgb(35, 35, 35)')
     document.documentElement.style.setProperty('--crosshair-border-color', 'rgb(35, 35, 35)')
     document.documentElement.style.setProperty('--filter-inversion-state', '0')
-    darkModeToggle.textContent = 'Dark mode';
   }
   lightDarkToggle.classList.toggle('btn-setting-active');
   darkModeStatus = !darkModeStatus; // toggle it.
   localStorage.setItem('darkMode', darkModeStatus.toString());
-
 }

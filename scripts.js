@@ -56,14 +56,7 @@ jumpLinks.forEach((link) => {
 })
 
 lightDarkToggle.addEventListener('click', toggleDarkMode)
-
-fixHeaderBtn.addEventListener('click', () => {
-  header.classList.toggle('fixed-header');
-  ghostHeader.classList.toggle('show');
-  layoutContainer.classList.toggle('vertical-buffer');
-  fixHeaderBtn.classList.toggle('btn-setting-active');
-  stickyHeaderActive = !stickyHeaderActive;
-})
+fixHeaderBtn.addEventListener('click', toggleStickyHeader)
 
 
 backgroundSquares.forEach((square) => {
@@ -103,7 +96,6 @@ previewItems.forEach((item) => {
 
 // IIFE to set dark mode 
 let setDarkLightMode = ( () => {
-
   if (window.matchMedia) {
     // check device prefers dark mode
     const query = window.matchMedia('(prefers-color-scheme: dark)');
@@ -119,11 +111,16 @@ let setDarkLightMode = ( () => {
       toggleDarkMode();
     }  else {
 
-    }
-      
+    }   
   }
-  
 })()
+
+let setStickyStatus = ( () => {
+  if (localStorage.getItem("stickyHeader") === "true" &&
+    stickyHeaderActive === false){
+      toggleStickyHeader();
+  }
+})();
 
 
 
@@ -144,4 +141,13 @@ function toggleDarkMode () {
   lightDarkToggle.classList.toggle('btn-setting-active');
   darkModeStatus = !darkModeStatus; // toggle it.
   localStorage.setItem('darkMode', darkModeStatus.toString());
+}
+
+function toggleStickyHeader () {
+  header.classList.toggle('fixed-header');
+  ghostHeader.classList.toggle('show');
+  layoutContainer.classList.toggle('vertical-buffer');
+  fixHeaderBtn.classList.toggle('btn-setting-active');
+  stickyHeaderActive = !stickyHeaderActive;
+  localStorage.setItem('stickyHeader', stickyHeaderActive.toString());
 }

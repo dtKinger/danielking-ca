@@ -213,8 +213,12 @@ p {
   
 }
 
-.social-icons {
-  
+.social-icons { /* Footer link class */
+
+}
+
+.social-icon:hover{ /* crosshair square 4 class */
+  scale: 1.2;
 }
 
 .crosshair-container{

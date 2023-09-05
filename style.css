@@ -66,16 +66,20 @@ button{
   color: var(--text-color-default);
   background-color: var(--bg-color-default);
   cursor: pointer;
-  filter: invert(1); /* By default make buttons inverted */
+  /* filter: invert(1);  By default make buttons inverted */
 }
 
 .btn-setting-active{
   background-color: hotpink;
+  /* background-color: green; */
   box-shadow: inset 2px 2px 2px 2px white;
+  
 }
 
 .btn-not-active{
+  /* box-shadow: -1px -1px 1px 1px green; */
   box-shadow: -1px -1px 1px 1px hotpink;
+  
 }
 
 body {
@@ -96,6 +100,7 @@ header {
   min-width: 320px;
   justify-content: space-between;
   background-color: var(--bg-color-default);
+  filter: invert(1);
   z-index: 3;
 }
 

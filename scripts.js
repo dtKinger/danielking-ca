@@ -96,12 +96,12 @@ previewItems.forEach((item) => {
 
 // IIFE to set dark mode 
 let setDarkLightMode = ( () => {
+  
   if (window.matchMedia) {
     // check device prefers dark mode
     const query = window.matchMedia('(prefers-color-scheme: dark)');
     // if prefers: dark mode, run the click function
     if (localStorage.getItem("darkMode")){
-      console.log(`No OS dark mode preference detected, loading localStorage...`)
         if (localStorage.getItem("darkMode") === "true" &&
             darkModeStatus === false){
           toggleDarkMode();

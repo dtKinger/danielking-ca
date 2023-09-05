@@ -460,8 +460,8 @@ p {
 .grid-item{
   border: 1px solid var(--accent-color-default);
   border-radius: 5px;
-  max-height: calc(100% - var(--square-padding));
-  max-width: calc(100% - var(--square-padding));
+  max-height: 100%;
+  max-width: 100%;
   white-space: wrap;
   display: flex;
   justify-content: center;

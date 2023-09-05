@@ -165,14 +165,14 @@ function reloadInvertedSVGs () {
   // svgsLogoImage.style.display = 'none';
   // svgsLogoImage.style.display = 'revert';
   svgsLogoImage.classList.add('hide');
-  setTimeout( () => svgsLogoImage.classList.remove('hide'), 1000);
+  setTimeout( () => svgsLogoImage.classList.remove('hide'), 20);
   
   svgsIcon.forEach((svg) => {
     svg.classList.add('hide');
-    setTimeout( () => svg.classList.remove('hide'), 1000);
+    setTimeout( () => svg.classList.remove('hide'), 20);
   })
   svgsSocialIcons.forEach((svg) => {
     svg.classList.add('hide');
-    setTimeout( () => svg.classList.remove('hide'), 1000);
+    setTimeout( () => svg.classList.remove('hide'), 20);
   })
 }

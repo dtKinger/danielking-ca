@@ -570,6 +570,11 @@ p {
     text-align: center;
     flex-wrap: wrap;
   }
+
+  /* .preview-item{
+    transition-duration: 0s;
+  }  If I want to remove mobile transitions */ 
+
 }
 /* End of Mobile */
 

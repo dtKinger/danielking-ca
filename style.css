@@ -474,6 +474,19 @@ p {
   background-color: var(--color-of-the-moment);
 }
 
+.accent-square-inner:hover::after{
+  animation: spin 2s infinite;
+}
+
+@keyframes spin {
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotateY(360deg)
+  }
+}
+
 .accent-square-inner {
   position: relative;
   font-family: cursive;
@@ -491,13 +504,7 @@ p {
 .accent-square-inner:after{
   content: 'Fin.';
   font-family: cursive;
-
 }
-
-
-
-
-
 
 /* Utils */
 

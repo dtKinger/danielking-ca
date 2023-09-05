@@ -58,6 +58,8 @@ a, a:visited {
 }
 
 button{
+  width: min-content;
+  white-space: nowrap;
   font-family: 'Roboto';
   padding: 8px 12px;
   font-size: 15px;
@@ -104,6 +106,19 @@ header {
   z-index: 3;
 }
 
+.logo{
+  justify-content: flex-start;
+  color: green;
+}
+
+.logo > img {
+  padding: 16px 16px;
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+  filter: invert(var(--filter-inversion-state));
+}
+
 .fixed-header {
   z-index: 10;
   position: fixed;
@@ -112,7 +127,7 @@ header {
 }
 
 .vertical-buffer{
-  margin-top: 15vh;
+  margin-top: 18vh;
 }
 
 header > div {
@@ -124,6 +139,7 @@ header > div {
 
 .nav-theme-select {
   display: flex;
+  flex-wrap: wrap;
 }
 
 main {
@@ -630,10 +646,6 @@ p {
 
   header{
     justify-content: center;  
-  }
-
-  .nav-links{
-    justify-content: center;
   }
 
   .layout-change{

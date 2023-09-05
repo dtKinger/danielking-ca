@@ -165,14 +165,14 @@ function reloadInvertedSVGs () {
   // svgsLogoImage.style.display = 'none';
   // svgsLogoImage.style.display = 'revert';
   svgsLogoImage.classList.add('hide');
-  svgsLogoImage.classList.remove('hide');
-
+  setTimeout( () => svgsLogoImage.classList.remove('hide'), 1000);
+  
   svgsIcon.forEach((svg) => {
     svg.classList.add('hide');
-    svg.classList.remove('hide');
+    setTimeout( () => svg.classList.remove('hide'), 1000);
   })
   svgsSocialIcons.forEach((svg) => {
     svg.classList.add('hide');
-    svg.classList.remove('hide');
+    setTimeout( () => svg.classList.remove('hide'), 1000);
   })
 }

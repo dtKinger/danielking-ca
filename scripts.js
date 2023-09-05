@@ -122,21 +122,21 @@ let setStickyStatus = ( () => {
   }
 })();
 
-
-
 function toggleDarkMode () {
   if (darkModeStatus === false){
+    document.documentElement.style.setProperty('--filter-inversion-state', '1')
     document.documentElement.style.setProperty('--text-color-default', 'white')
     document.documentElement.style.setProperty('--bg-color-default', 'rgb(35, 35, 35)')
     document.documentElement.style.setProperty('--accent-color-default', 'white')
     document.documentElement.style.setProperty('--crosshair-border-color', 'white')
-    document.documentElement.style.setProperty('--filter-inversion-state', '1')
+    
   } else if (darkModeStatus === true){
+    document.documentElement.style.setProperty('--filter-inversion-state', '0')
     document.documentElement.style.setProperty('--text-color-default', 'rgb(35, 35, 35)')
     document.documentElement.style.setProperty('--bg-color-default', 'white')
     document.documentElement.style.setProperty('--accent-color-default', 'rgb(35, 35, 35)')
     document.documentElement.style.setProperty('--crosshair-border-color', 'rgb(35, 35, 35)')
-    document.documentElement.style.setProperty('--filter-inversion-state', '0')
+    
   }
   lightDarkToggle.classList.toggle('btn-setting-active');
   lightDarkToggle.classList.toggle('btn-not-active');

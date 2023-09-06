@@ -25,11 +25,16 @@ const expandProfileButton = document.querySelector('.truncate-btn');
 
 expandProfileButton.addEventListener('click', () => {
   let getMobileProfileCollapsibles = document.querySelectorAll('.mobile-content');
-  console.log(getMobileProfileCollapsibles)
   getMobileProfileCollapsibles.forEach((item) => {
     item.classList.toggle('collapsible');
   })
   
+  if (expandProfileButton.textContent === 'Read more'){
+    expandProfileButton.textContent = 'Read less'
+  } else {
+    expandProfileButton.textContent = 'Read more'
+  }
+
 })
 
 jumpLinks.forEach((link) => {

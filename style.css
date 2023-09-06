@@ -514,14 +514,30 @@ p {
 }
 
 .truncate-btn{
-  align-self: center;
   margin: 0 auto 1rem auto;
 }
 
 .collapsible{
-  opacity: 0;
-  line-height: 0;
+  display: none;
+  line-height: 1.5;
+  /* transition: 0.3s; */
 }
+
+.slide-in{
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    line-height: 0;
+  }
+  100% {
+    opacity: 1;
+    line-height: 1.5;
+  }
+}
+
 
 /* Utils */
 
@@ -591,7 +607,9 @@ p {
 @media screen and (max-width: 600px){
 
   .mobile-profile{
-    display: revert;
+    display: flex;
+    flex-direction: column;
+    
   }
 
   .desktop-profile{

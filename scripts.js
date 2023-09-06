@@ -21,7 +21,16 @@ const backgroundSquares = document.querySelectorAll('.square');
 const previewItems = document.querySelectorAll('.preview-item');
 const ghostHeader = document.querySelector('.ghost-header');
 const jumpLinks = document.querySelectorAll('.jump-link');
+const expandProfileButton = document.querySelector('.truncate-btn');
 
+expandProfileButton.addEventListener('click', () => {
+  let getMobileProfileCollapsibles = document.querySelectorAll('.mobile-content');
+  console.log(getMobileProfileCollapsibles)
+  getMobileProfileCollapsibles.forEach((item) => {
+    item.classList.toggle('collapsible');
+  })
+  
+})
 
 jumpLinks.forEach((link) => {
   link.addEventListener('click', (e) => {
@@ -176,3 +185,6 @@ function reloadInvertedSVGs () {
     setTimeout( () => svg.classList.remove('hide'), 20);
   })
 }
+
+// Text truncation / drop-down
+

@@ -9,13 +9,17 @@
   <title>Daniel King | Contact</title>
 </head>
 <body>
-  <header>
+  <header id="contact">
+
+    <div class="logo">
+      <img src="../images/dk_ca_logo_256.png" alt="Logo image for danielking's website.">
     <div class="nav-left flex">
       <div class="nav-theme-select gap-10">
-        <button class="theme-toggle" id="light-dark-mode">Dark mode</button>
-        <button class="fixed-header-btn">Sticky header</button>
+        <button class="theme-toggle btn-not-active" id="light-dark-mode">Dark mode</button>
+        <button class="fixed-header-btn btn-not-active">Sticky header</button>
       </div>
     </div>
+  </div>
     
     <div class="nav-links">
       <div class="hamburger"></div>
@@ -34,7 +38,9 @@
     </div>
   </header>
   <main>
-    <h2 class="page-title">Contact Me</h2>
+    <div class="ghost-header hide"></div>
+    <div class="layout-change">
+      <h2 class="page-title">Contact Me</h2>
       <div class="wrapper">
         <form class="contact-form-container" action="https://formspree.io/f/moqownla" method="POST">
           <div class="labeled-field">
@@ -49,6 +55,7 @@
           <button type="submit">Send</button>
         </form>
       </div>
+    </div>
   </main>
   <footer class="flex">
     <div class="footer-projects">

@@ -713,7 +713,7 @@ p {
   .profile{
     max-height: 520px;
     max-width: 800px;
-    overflow: scroll;
+    overflow: auto;
     margin: auto auto;
   }
   .vertical-buffer {

@@ -194,7 +194,7 @@ p {
   background-color: var(--bg-color-default);
   border: 2px solid var(--accent-color-default);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 10px 3px 3px 10px; /* Taper the right side for square scrollbar*/
   margin-bottom: 40px;
   line-height: 1.5;
 }

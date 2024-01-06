@@ -761,7 +761,7 @@ p {
 
   .profile-col > p {
     max-height: 160px;
-    overflow: scroll;
+    overflow: auto;
   }
 
 }
